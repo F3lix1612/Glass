@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galia Glass - Materiales de Construcción en Seco</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #1C1F26, #2A2D36); /* Fondo degradado más oscuro */
+            color: #E0E0E0; /* Texto en gris claro */
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0D47A1; /* Azul marino más oscuro */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #1E88E5; /* Celeste oscuro */
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #E1F5FE; /* Gris claro vivo */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            max-width: 1200px; /* Limita el ancho máximo de la página */
+            margin: 0 auto; /* Centra el contenedor */
+        }
+
+        .card {
+            background-color: #2C2F38; /* Fondo más oscuro para tarjetas */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin: 20px;
+            padding: 20px;
+            flex-basis: 30%;
+            transition: transform 0.3s;
+            color: #E0E0E0; /* Texto en gris claro */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #1E88E5; /* Celeste oscuro */
+            font-family: 'Montserrat', sans-serif;
+            border-bottom: 2px solid #BBDEFB; /* Gris claro vivo */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            text-align: center;
+            color: #E0E0E0; /* Texto en gris claro */
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        p, ul {
+            line-height: 1.8;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        canvas {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #0D47A1; /* Azul marino más oscuro */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        footer a {
+            color: #BBDEFB; /* Gris claro vivo */
+            text-decoration: none;
+        }
+
+        .remuneracion-card {
+            background-color: white; /* Fondo blanco para la tarjeta de remuneración */
+            color: #0D47A1; /* Texto en azul marino */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            padding: 20px;
+            flex-basis: 100%; /* Ocupa todo el ancho en dispositivos más pequeños */
+        }
+
+        .chart-box {
+            background-color: white; /* Fondo blanco para el gráfico */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px 0; /* Separación del gráfico */
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex-basis: 100%;
+            }
+
+            nav {
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="Logo Galia Glass.jpg" alt="Log Galia Glass" style="width: 100px; height: auto; float: left; margin: 10px;">
+        <img src="Logo Galia Glass.jpg" alt="Logo Galia Glass" style="width: 100px; height: auto; float: right; margin: 10px;">
+
+        <h1>Galia Glass</h1>
+        <p>Comercialización de Materiales de Construcción en Seco</p>
+    </header>
+
+    <nav>
+        <a href="#mision">Misión</a>
+        <a href="#vision">Visión</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#productos">Productos</a>
+        <a href="#estructura-legal">Estructura Legal</a>
+        <a href="#puestos">Puestos Vacantes</a>
+        <a href="#remuneracion">Remuneración</a>
+        <a href="#mercado">Estudio de Mercado</a>
+        <a href="#preferencias">Preferencias de Productos</a> <!-- Nueva sección -->
+        <a href="#punto-equilibrio">Punto de Equilibrio</a>
+        <a href="#proceso-reclutamiento">Proceso de Reclutamiento</a>
+        <a href="#competencia">Competencia</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="container">
+        <section id="mision" class="card">
+            <h2>Misión</h2>
+            <p>Galia Glass tiene como misión brindar soluciones al sector de la construcción en seco, comercializando productos de calidad y apostando constantemente al desarrollo del rubro.</p>
+        </section>
+
+        <section id="vision" class="card">
+            <h2>Visión</h2>
+            <p>Posicionarnos como competidores fuertes en nuestro rubro, siendo el proveedor preferencial de los clientes y apostando por la innovación en nuestros productos.</p>
+        </section>
+
+        <section id="objetivos" class="card">
+            <h2>Objetivos</h2>
+            <ul>
+                <li>Incrementar las ventas en canales digitales.</li>
+                <li>Mejorar la eficiencia operativa.</li>
+                <li>Optimizar la cadena de suministros.</li>
+                <li>Fortalecer la presencia en el mercado local y regional.</li>
+            </ul>
+        </section>
+
+        <section id="productos" class="card">
+            <h2>Productos</h2>
+            <p>Nos especializamos en la comercialización de materiales de construcción en seco, como:</p>
+            <ul>
+                <li>ACM (Aluminio Compuesto).</li>
+                <li>Vidrios de alta calidad para todo tipo de construcción.</li>
+            </ul>
+        </section>
+
+        <section id="estructura-legal" class="card">
+            <h2>Estructura Legal</h2>
+            <p>Nuestra empresa se rige bajo las siguientes leyes que nos permiten operar dentro del marco legal correspondiente:</p>
+            <ul>
+                <li><strong>Ley 1034/83</strong>: Del comerciante.</li>
+                <li><strong>Ley 6380/19</strong>: Ley de simplificación y actualización tributaria.</li>
+                <li><strong>Ley 2421/04</strong>: Sobre la competitividad económica.</li>
+                <li><strong>Ley 1183/85</strong>: Del Código Civil Paraguayo.</li>
+                <li><strong>Ley 213</strong>: Establece el Código Laboral.</li>
+            </ul>
+        </section>
+
+        <section id="puestos" class="card">
+            <h2>Puestos Vacantes</h2>
+            <p>Estos son los puestos vacantes en Galia Glass, con la remuneración correspondiente:</p>
+            <ul>
+                <li>Propietario: Gs. 3.300.000</li>
+                <li>Cajera: Gs. 2.680.373</li>
+                <li>Vendedora: Gs. 2.680.373</li>
+                <li>Encargada de Depósito: Gs. 2.061.820</li>
+                <li>Contadora: Gs. 1.320.000</li>
+            </ul>
+            <p>Total de remuneraciones: Gs. 12.042.566</p>
+        </section>
+
+        <section id="remuneracion" class="remuneracion-card">
+            <h2>Remuneración del Personal</h2>
+            <div class="charts-container">
+                <div class="chart-box">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="mercado" class="card">
+            <h2>Estudio de Mercado</h2>
+            <p>En nuestro estudio de mercado, hemos identificado las siguientes preferencias de nuestros clientes:</p>
+            <ul>
+                <li>Los clientes prefieren utilizar vidrios de alta calidad en sus obras.</li>
+                <li>La mayoría de los clientes trabaja con estaciones de servicio ubicadas en Asunción: Avda. Médicos del Chaco 2713, Avda. Eusebio Ayala 4008, y Tte. Víctor F. Valdez.</li>
+                <li>La medida de vidrio más solicitada por los clientes es de dimensiones estándar para uso residencial y comercial.</li>
+            </ul>
+        </section>
+
+        <section id="preferencias" class="card">
+            <h2>Preferencias de Productos</h2>
+            <p>En Galia Glass, hemos analizado las preferencias de productos de nuestros clientes. A continuación se muestra un gráfico que ilustra la distribución de las preferencias entre los diferentes tipos de productos que ofrecemos:</p>
+            <div class="chart-box">
+                <canvas id="pieChartProductos"></canvas>
+            </div>
+        </section>
+
+        <section id="punto-equilibrio" class="card">
+            <h2>Punto de Equilibrio</h2>
+            <div class="charts-container">
+                <div class="chart-box">
+                    <h3>Punto de Equilibrio</h3>
+                    <canvas id="lineChartEquilibrio"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="proceso-reclutamiento" class="card">
+            <h2>Proceso de Reclutamiento</h2>
+            <p>Galia Glass tiene un proceso de reclutamiento definido para asegurar que el personal contratado esté altamente capacitado. El proceso incluye:</p>
+            <ul>
+                <li><strong>Atracción de Candidatos:</strong> Publicación de flayers y búsqueda de perfiles.</li>
+                <li><strong>Recepción y Revisión de Solicitudes:</strong> Selección de candidatos calificados.</li>
+                <li><strong>Entrevistas y Verificación de Referencias:</strong> Confirmación de la experiencia de los postulantes.</li>
+                <li><strong>Oferta de Trabajo:</strong> Envío de oferta laboral a los candidatos seleccionados.</li>
+            </ul>
+        </section>
+
+        <section id="competencia" class="card">
+            <h2>Análisis de la Competencia</h2>
+            <p>La competencia en el sector de materiales de construcción en seco es alta, con varias empresas locales y regionales que ofrecen productos similares. Sin embargo, nuestra propuesta de valor se basa en la calidad, rapidez en la entrega y atención al cliente personalizada.</p>
+        </section>
+    </div>
+
+    <section id="galeria" class="card">
+        <h2>Estados del resultado</h2>
+    
+        <ul>
+        <img height="425" src="imagen 2.png" alt="Galeria 1">
+        <img src="imagen 1.png" alt="Galeria 2">
+        </ul>
+        
+    </section>
+
+    <section id="contacto" class="card">
+        <h2>Contacto</h2>
+        <p>Si tienes alguna consulta o deseas más información, completa el formulario a continuación:</p>
+        <form action="#" method="post">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+            <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Galia Glass. Todos los derechos reservados.</p>
+        <p>Visítanos en nuestras sucursales en Asunción: Avda. Médicos del Chaco 2713, Avda. Eusebio Ayala 4008, Tte. Víctor F. Valdez</p>
+    </footer>
+
+    <!-- Script para los gráficos de Chart.js -->
+    <script>
+        // Gráfico de Barras: Remuneración del Personal
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        const barChart = new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Propietario', 'Cajera', 'Vendedora', 'Encargada de Depósito', 'Contadora'],
+                datasets: [{
+                    label: 'Remuneración en Gs.',
+                    data: [3300000, 2680373, 2680373, 2061820, 1320000],
+                    backgroundColor: '#1E88E5', /* Celeste oscuro vivo */
+                    borderColor: '#1565C0', /* Azul marino vivo */
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Gráfico de Pastel: Preferencias de Productos
+        const pieCtx = document.getElementById('pieChartProductos').getContext('2d');
+        const pieChartProductos = new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Vidrio', 'ACM'],
+                datasets: [{
+                    data: [70, 30],
+                    backgroundColor: ['#1E88E5', '#90CAF9'], /* Celeste oscuro y gris claro */
+                    borderColor: '#1565C0' /* Azul marino vivo */
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Gráfico de Líneas: Punto de Equilibrio
+        const lineCtx = document.getElementById('lineChartEquilibrio').getContext('2d');
+        const lineChartEquilibrio = new Chart(lineCtx, {
+            type: 'line',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                datasets: [{
+                    label: 'Punto de Equilibrio',
+                    data: [100, 150, 200, 220, 300, 350],
+                    backgroundColor: '#1565C0', /* Azul marino vivo */
+                    borderColor: '#1E88E5', /* Celeste oscuro vivo */
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
